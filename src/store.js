@@ -6,7 +6,7 @@ import thunk from "redux-thunk"
 // for this we'll use Redux "compose" function
 const enhancers = compose(
     applyMiddleware(thunk), // your own middleware
-    window.devToolsExtension ? window._REDUX_DEVTOOLS_EXTENSION_() : (f) => f
+    // window.devToolsExtension ? window._REDUX_DEVTOOLS_EXTENSION_() : (f) => f
 );// devtools middleware
 
 export let store = createStore(rootReducer, enhancers);
